@@ -1,8 +1,9 @@
 using Azure.Identity;
 using MBatch.Azure.Extensions.TestApi.DI;
+using MBatch.TestApi;
 using Microsoft.Extensions.Azure;
 
-namespace MBatch.TestApi
+namespace MBatch.Azure.Extensions.TestApi
 {
     public class Program
     {
