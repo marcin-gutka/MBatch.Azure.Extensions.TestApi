@@ -33,7 +33,7 @@ public class JobTaskController : ControllerBase
     [HttpPost("{jobId}/{taskId}")]
     public async Task<IActionResult> Create(string jobId, string taskId, [FromBody] string commandLine)
     {
-        var task = CloudTaskUtilities.CreateTask(taskId, commandLine);
+        var task = CloudTaskUtilities.CreateTask(taskId, commandLine, isPoolScope: true, isAdmin: true);
 
         var success = await _batchClient.CommitTaskAsync(jobId, task, false);
 
