@@ -48,7 +48,7 @@ public class JobTaskController : ControllerBase
         return Ok(success);
     }
 
-    [HttpGet("taskCommandLine")]
+    [HttpGet("commandLine")]
     public IActionResult GetTaskCommandLine(string applicationName, string applicationVersion, string relativePath, bool isWindows, string arg)
     {
         var appPath = CommandLineUtilities.GetInstalledApplicationPath(isWindows, applicationName, applicationVersion, relativePath);
